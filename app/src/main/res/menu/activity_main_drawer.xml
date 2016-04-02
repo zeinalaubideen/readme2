@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:title="Chapters">
+            <menu>
+                <item
+                    android:id="@+id/intro"
+                    android:icon="@drawable/ic_menu_camera"
+                    android:title="Introduction" />
+                <item
+                    android:id="@+id/alphabet"
+                    android:icon="@drawable/ic_menu_gallery"
+                    android:title="Alphabet" />
+                <item
+                    android:id="@+id/forms"
+                    android:icon="@drawable/ic_menu_slideshow"
+                    android:title="Letter Forms" />
+                <item
+                    android:id="@+id/short_vowels"
+                    android:icon="@drawable/ic_menu_manage"
+                    android:title="Short Vowels" />
+                <item
+                    android:id="@+id/tanween"
+                    android:icon="@drawable/ic_menu_manage"
+                    android:title="Tanween" />
+                <item
+                    android:id="@+id/sukoon"
+                    android:icon="@drawable/ic_menu_manage"
+                    android:title="Sukoon" />
+                <item
+                    android:id="@+id/long_vowels"
+                    android:icon="@drawable/ic_menu_manage"
+                    android:title="Long Vowels" />
+                <item
+                    android:id="@+id/dipthongs"
+                    android:icon="@drawable/ic_menu_manage"
+                    android:title="Dipthongs" />
+                <item
+                    android:id="@+id/shaddah"
+                    android:icon="@drawable/ic_menu_manage"
+                    android:title="Shaddah" />
+                <item
+                    android:id="@+id/lam_rules"
+                    android:icon="@drawable/ic_menu_manage"
+                    android:title="The Rules of ل" />
+                <item
+                    android:id="@+id/meem_rules"
+                    android:icon="@drawable/ic_menu_manage"
+                    android:title="The Rules of م" />
+                <item
+                    android:id="@+id/noon_rules"
+                    android:icon="@drawable/ic_menu_manage"
+                    android:title="The Rules of ن" />
+                <item
+                    android:id="@+id/stopping"
+                    android:icon="@drawable/ic_menu_manage"
+                    android:title="Stopping" />
+                <item
+                    android:id="@+id/madd"
+                    android:icon="@drawable/ic_menu_manage"
+                    android:title="Madd" />
+                <item
+                    android:id="@+id/misc_rules"
+                    android:icon="@drawable/ic_menu_manage"
+                    android:title="Miscellaneous Rules" />
+
+            </menu>
+        </item>
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:contextClickable="false"
+    android:textAlignment="center"
+    android:background="#F7E7CE"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#247BA0"
+        android:weightSum="1"
+        android:baselineAligned="false">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="5dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Sukoon"
+                android:id="@+id/textView2"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textColor="#FDFFFC"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sukoon (سكون) is placed on a letter to show that it is free from vowel sounds and that the vowel sound of the previous letter will end on the letter with sukoon. A letter with sukoon is called saakin (ساكن) ."
+                android:id="@+id/textView84"
+                android:textSize="18sp"
+                android:layout_margin="10dp"
+                android:textColor="#FDFFFC" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Shape"
+                        android:id="@+id/textView61"
+                        android:layout_weight="1"
+                        android:textSize="18dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:textColor="#FDFFFC" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Example"
+                        android:id="@+id/textView62"
+                        android:layout_weight="1"
+                        android:textSize="18dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:textColor="#FDFFFC" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textAlignment="center" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ْ"
+                        android:id="@+id/textView64"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+                        android:textSize="66sp"
+                        android:textIsSelectable="false"
+                        android:textColor="#FDFFFC" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="بْ"
+                        android:id="@+id/textView65"
+                        android:layout_weight="1"
+                        android:textSize="36sp"
+                        android:textAlignment="center"
+                        android:textIsSelectable="false"
+                        android:textColor="#FDFFFC" />
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="When a letter is saakin its makhraj can be easily identified."
+                android:id="@+id/textView86"
+                android:textSize="18sp"
+                android:layout_margin="10dp"
+                android:textColor="#FDFFFC" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="qalqalah"
+                android:id="@+id/textView87"
+                android:textSize="18sp"
+                android:layout_margin="10dp"
+                android:textColor="#FDFFFC" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="There are five letters that when saakin are read with qalqalah , or a bouncing sound. Those letters are: "
+                android:id="@+id/textView88"
+                android:textSize="18sp"
+                android:layout_margin="10dp"
+                android:textColor="#FDFFFC" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ق ط ب ج د"
+                android:id="@+id/textView89"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:layout_margin="10dp"
+                android:textColor="#FDFFFC" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="The letter ر saakin will be read with tafkheem when it is preceded by fathah or dhammah, and will be read with tarqeeq when preceded by kasrah in the same word if it is not followed by a letter with tafkheem."
+                android:id="@+id/textView74"
+                android:textSize="18sp"
+                android:layout_margin="10dp"
+                android:textColor="#FDFFFC" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageButton
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/jeemButton"
+                android:src="@drawable/jeemqal"
+                android:onClick="jeem"
+                android:scaleType="fitCenter"
+                android:background="#00000000"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp" />
+
+            <ImageButton
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/thaButton"
+                android:src="@drawable/thacirc"
+                android:onClick="tha"
+                android:scaleType="fitCenter"
+                android:background="#00000000"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp" />
+
+            <ImageButton
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/taButton"
+                android:src="@drawable/tacirc"
+                android:onClick="ta"
+                android:scaleType="fitCenter"
+                android:background="#00000000"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp" />
+
+            <ImageButton
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/baButton"
+                android:src="@drawable/baqal"
+                android:onClick="ba"
+                android:scaleType="fitCenter"
+                android:background="#00000000"
+                android:layout_gravity="bottom"
+                android:nestedScrollingEnabled="false"
+                android:layout_weight="1"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.22"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <ImageButton
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/dhaButton"
+                android:src="@drawable/dhacirc"
+                android:scaleType="fitCenter"
+                android:background="#00000000"
+                android:onClick="dha"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp" />
+
+            <ImageButton
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/daButton"
+                android:src="@drawable/daqal"
+                android:onClick="da"
+                android:scaleType="fitCenter"
+                android:background="#00000000"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp" />
+
+            <ImageButton
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/khaButton"
+                android:src="@drawable/khacirct"
+                android:onClick="kha"
+                android:scaleType="fitCenter"
+                android:background="#00000000"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp" />
+            />
+
+            <ImageButton
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/haButton"
+                android:src="@drawable/hacirc"
+                android:onClick="ha"
+                android:scaleType="fitCenter"
+                android:background="#00000000"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp" /><![CDATA[
+            />
+
+            />
+        ]]>
+        </LinearLayout><LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/sheenButton"
+            android:src="@drawable/sheencirc"
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:onClick="sheen"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" />
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/seenButton"
+            android:src="@drawable/seencirc"
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:onClick="seen"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" />
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/zaButton"
+            android:src="@drawable/zacirc"
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:onClick="za"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" />
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/raButton"
+            android:src="@drawable/racirct"
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:onClick="ra"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" />
+
+    </LinearLayout><LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/dhaaButton"
+            android:src="@drawable/dhaacirct"
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:onClick="dhaa"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" />
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/tahButton"
+            android:src="@drawable/taahqal"
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:onClick="tah"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" />
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/daadButton"
+            android:src="@drawable/daadcirct"
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:onClick="daad"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" />
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/saadButton"
+            android:src="@drawable/saadcirct"
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:onClick="saad"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" />
+
+    </LinearLayout><LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/qafButton"
+            android:src="@drawable/qafqal"
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:onClick="qaf"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" />
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/faButton"
+            android:src="@drawable/facirc"
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:onClick="fa"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" />
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/ghaynButton"
+            android:src="@drawable/ghayncirct"
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:onClick="ghayn"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" />
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/aynButton"
+            android:src="@drawable/ayncirc"
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:onClick="ayn"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" />
+
+    </LinearLayout><LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/noonButton"
+            android:src="@drawable/nooncirc"
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:onClick="noon"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" />
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/meemButton"
+            android:src="@drawable/meemcirc"
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:onClick="meem"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" />
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/lamButton"
+            android:src="@drawable/lamcirct"
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:onClick="lam"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" />
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/kafButton"
+            android:src="@drawable/kafcirc"
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:onClick="kaf"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" />
+
+    </LinearLayout><LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/yaButton"
+            android:src="@drawable/yacirc"
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:onClick="ya"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" />
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/hamzaButton"
+            android:src="@drawable/hamzacirc"
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:onClick="hamza"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" />
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/haaButton"
+            android:src="@drawable/haacirc"
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:onClick="haa"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" />
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/wowButton"
+            android:src="@drawable/wowcirc"
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:onClick="wow"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" />
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>
+

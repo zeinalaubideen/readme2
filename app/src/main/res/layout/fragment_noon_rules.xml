@@ -1,0 +1,164 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="zayne.fragz.NoonRules"
+    android:background="#247BA0"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#247BA0">
+    <TextView
+        android:textColor="#FDFFFC"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="The Rules of ن"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:layout_margin="10dp"
+        android:textStyle="bold" />
+    <TextView
+        android:textColor="#FDFFFC"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="There are four rules which apply to ن saakin and tanween (the same rules apply to tanween because it produces the same sound as ن saakin)."
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textSize="18sp"
+        android:layout_margin="10dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="1. Iqlaab (اقلاب) , which literally means to change. It is done when ب  follows ن  saakin or tanween. The  ن saakin or tanween will be changed into a م saakin and read with a light gunnah from the lips for one alif, as in:"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textSize="18sp"
+        android:layout_margin="10dp"
+        android:textColor="#FDFFFC" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="مِنْۘ بَعْدِ"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textSize="24sp"
+        android:layout_margin="10dp"
+        android:textAlignment="center"
+        android:textColor="#FDFFFC" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="2. Ithhaar (اظهار) , which literally means to make clear. It is done when any of the letters of the throat (ء ه ع ح خ غ) come after ن saakin or tanween. The ن saakin or tanween will be read clearly without any stretching or gunnah, as in:"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textSize="18sp"
+        android:layout_margin="10dp"
+        android:textColor="#FDFFFC" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="يَنْحِتُوْنَ"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textSize="24sp"
+        android:layout_margin="10dp"
+        android:textAlignment="center"
+        android:textColor="#FDFFFC" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="3. Idghaam (ادغام), which literally means to assimilate. It is done when any of the six letters (ي ر م ل و ن) come after ن saakin or tanween in the same word (if it is not in the same word then saakin will be read with ithhaar). It is of two types:"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textSize="18sp"
+        android:layout_margin="10dp"
+        android:textColor="#FDFFFC" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Complete"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:textSize="18sp"
+        android:layout_margin="10dp"
+        android:textColor="#FDFFFC" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="in which the ن saakin or tanween is completely assimilated without any gunnah. This occurs when ر or ل follow saakin or tanween, as in:"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:textSize="18sp"
+        android:layout_margin="10dp"
+        android:textColor="#FDFFFC" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="مِنْ رَّ بِّهِمْ"
+        android:id="@+id/textView21"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:textSize="24sp"
+        android:layout_margin="10dp"
+        android:textAlignment="center"
+        android:textColor="#FDFFFC" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Incomplete"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:textSize="18sp"
+        android:layout_margin="10dp"
+        android:textColor="#FDFFFC" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="in which the ن saakin or tanween are partially assimilated and read with a gunnah for one alif. This occurs when any of the remaining four letters (م ي و ن) come after ن saakin or tanween, as in:"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:textSize="18sp"
+        android:layout_margin="10dp"
+        android:textColor="#FDFFFC" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="مِنْ وَّالٍ"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:textSize="24sp"
+        android:layout_margin="10dp"
+        android:textAlignment="center"
+        android:textColor="#FDFFFC" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4. Ikhfaa (اخفاء) , which literally means to hide. It is done when any of the remaining fifteen letters come after ن saakin or tanween. It will be read with a light gunnah for one alif, as in:"
+        android:id="@+id/textView20"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textSize="18sp"
+        android:layout_margin="10dp"
+        android:textColor="#FDFFFC" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="اَنْتُمْ"
+        android:id="@+id/textView22"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textSize="24sp"
+        android:layout_margin="10dp"
+        android:textAlignment="center"
+        android:textColor="#FDFFFC" />
+
+</LinearLayout>
+
+
+</ScrollView>

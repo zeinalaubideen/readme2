@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#247BA0">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/intro"
+        android:background="#247BA0"
+        >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Tajweed (تجويد) literally means ‘to make better’ and when used in reference to the recitation of Quraan it means to read every letter from its place of articulation with all of its qualities. It is mandatory for every Muslim to read the Quraan in accordance to the rules of tajweed, although it is not mandatory for every Muslim to master the detailed rules of the science of tajweed. As long as there is, in every locality or community, someone who is well-versed in the science of tajweed, all of the Muslims of that area are absolved of their obligation to learn the detailed rules of tajweed. An attempt has been made to teach the reading of Quraan along with the basic rules of tajweed in clear and simple language so that it can be easy for learners of all ages to grasp. The objective of this book is to serve as a learning tool for reading the Holy Quraan on the foundation of the rules of tajweed as well as a reference for the basic rules of tajweed. This is not intended to be a self-teaching tool, but should be taught by a qualified qaaree, or one who has learned the recitation of Quraan from a chain of teachers linking back to the Prophet صلى الله عليه وسلم to Jibreel  to Allah . \n There are different narrations of the method of recitation of Quraan and each one varies slightly in the rules of tajweed. This book is designed to teach the rules of tajweed in accordance with the narration of Imam Hafs  from his teacher Imam &apos;Aasim . This is the most widely used narration amongst Muslims worldwide, but there are still other narrations being used in different parts of the Muslim world."
+        android:id="@+id/textView3"
+        android:layout_gravity="center"
+        android:textAlignment="textStart"
+        android:textColor="#FDFFFC"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:padding="10dp" />
+    </FrameLayout>
+</ScrollView>

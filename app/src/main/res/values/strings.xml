@@ -1,0 +1,93 @@
+<resources>
+    <string name="app_name">FoundationsFinal</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_ba"><center>Ba</center></string>
+    <string name="title_activity_ta">Ta</string>
+    <string name="title_activity_alif">Alif</string>
+    <string name="title_activity_tha">Tha</string>
+    <string name="title_activity_da">Da</string>
+    <string name="title_activity_dha">Dha</string>
+    <string name="title_activity_jeem">Jeem</string>
+    <string name="title_activity_ha">Ha</string>
+    <string name="title_activity_kha">Kha</string>
+    <string name="title_activity_ra">Ra</string>
+    <string name="title_activity_za">Za</string>
+    <string name="title_activity_seen">Seen</string>
+    <string name="title_activity_sheen">Sheen</string>
+    <string name="title_activity_saad">Saad</string>
+    <string name="title_activity_daad">Daad</string>
+    <string name="title_activity_taah">Taah</string>
+    <string name="title_activity_dhaa">Dhaa</string>
+    <string name="title_activity_ayn">Ayn</string>
+    <string name="title_activity_ghayn">Ghayn</string>
+    <string name="title_activity_fa">Fa</string>
+    <string name="title_activity_qaf">Qaf</string>
+    <string name="title_activity_kaf">Kaf</string>
+    <string name="title_activity_lam">Lam</string>
+    <string name="title_activity_meem">Meem</string>
+    <string name="title_activity_noon">Noon</string>
+    <string name="title_activity_wow">wow</string>
+    <string name="title_activity_haa">Haa</string>
+    <string name="title_activity_hamza">Hamza</string>
+    <string name="title_activity_ya">Ya</string>
+    <string name="title_activity_alif_fat">AlifFat</string>
+    <string name="lamRules"><ltr>The letters at the beginning of nouns with the definite article ال are of two types:</ltr></string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_activity_alif_form">AlifForm</string>
+    <string name="alifMakhraj">Empty portion of mouth (oral cavity)</string>
+    <string name="Alone">Alone</string>
+    <string name="Middle">Middle</string>
+    <string name="Beginning">Beginning</string>
+    <string name="none">none</string>
+    <string name="End">End</string>
+    <string name="baMakhraj">Tip of tongue touching gums of upper two front teeth</string>
+    <string name="aynMakhraj">Middle of the throat</string>
+    <string name="daMakhraj">Tip of tongue touching gums of upper two front teeth</string>
+    <string name="daadMakhraj">Upturned left, right, or both side(s) of tongue touching inner gums of upper molars (left side is easiest)</string>
+    <string name="dhaMakhraj">Tip of tongue touching edge of upper two front teeth</string>
+    <string name="dhaaMakhraj">Tip of tongue touching edge of upper two front teeth</string>
+    <string name="faMakhraj">Edge of upper two front teeth touching inner portion of lower lip</string>
+    <string name="ghaynMakhraj">Middle of the throat</string>
+    <string name="haMakhraj">Middle of the throat</string>
+    <string name="haaMakhraj">Bottom of the throat</string>
+    <string name="hamzaMakhraj">Bottom of the throat</string>
+    <string name="jeemMakhraj">Center of tongue touching upper palate</string>
+    <string name="kafMakhraj">Rear of tongue touching upper palate</string>
+    <string name="khaMakhraj">Top of the throat</string>
+    <string name="lamMakhraj">Edges (on either side or both sides) of tongue (from tip to side) touching gums of upper front teeth until premolarst</string>
+    <string name="meemMakhraj">Lips touching one another or from the nasal cavity only under special circumstances which will be explained later on</string>
+    <string name="noonMakhraj">Edges (on either side or both sides) of tongue (from tip to side) touching gums of upper front teeth until canine or from the nasal cavity only under special circumstances which will be explained later on</string>
+    <string name="qafMakhraj">Rearmost of tongue touching upper palate</string>
+    <string name="raMakhraj">Edges (on either side or both sides) of tongue (from tip to side) touching gums of upper front teeth until lateral incisor</string>
+    <string name="saadMakhraj">Tip of tongue touching edge of lower two front teeth along with upper two front teeth</string>
+    <string name="seenMakhraj">Tip of tongue touching edge of lower two front teeth along with upper two front teeth</string>
+    <string name="sheenMakhraj">Center of tongue touching upper palate</string>
+    <string name="taMakhraj">Tip of tongue touching gums of upper two front teeth</string>
+    <string name="taahMakhraj">Tip of tongue touching gums of upper two front teeth</string>
+    <string name="thaMakhraj">Tip of tongue touching edge of upper two front teeth</string>
+    <string name="wowMakhraj">Lips touching one another or empty part of the mouth only acting as a long vowel</string>
+    <string name="yaMakhraj">Center of tongue touching upper palate or empty part of the mouth only acting as a long vowel</string>
+    <string name="zaMakhraj">Tip of tongue touching edge of lower two front teeth along with upper two front teeth</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_short_vowels">ShortVowels</string>
+    <string name="title_activity_short_vdescript">ShortVDescript</string>
+    <string name="title_activity_tanween_description">TanweenDescription</string>
+    <string name="title_activity_sukoon_descrip">SukoonDescrip</string>
+    <string name="title_activity_long_vowel_descript">LongVowelDescript</string>
+    <string name="title_activity_shaddah_descrip">ShaddahDescrip</string>
+    <string name="title_activity_text_based">TextBased</string>
+    <string name="title_activity_long_vdesript">LongVDesript</string>
+    <string name="title_activity_dipthongs_n">DipthongsN</string>
+    <string name="title_activity_text_desc">TextDesc</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_gridz">gridz</string>
+
+
+</resources>

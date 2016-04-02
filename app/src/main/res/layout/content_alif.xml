@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HuroofDescript"
+    android:orientation="vertical"
+    android:baselineAligned="false">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FDFFFC"
+        app:titleTextColor="#247BA0"
+        />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#247BA0">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/harf"
+            android:textSize="150dp"
+            android:textAlignment="center"
+            android:textColor="#FDFFFC"
+            android:elevation="30dp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="#247BA0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Makhraj"
+            android:id="@+id/c"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:singleLine="true"
+            android:textSize="30sp"
+            android:textColor="#FDFFFC"
+            android:background="#247BA0" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|top"
+        android:background="#247BA0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:id="@+id/makhraj"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:textColor="#FDFFFC"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:contextClickable="false"
+    android:textAlignment="center"
+    android:background="#247BA0"
+
+    android:fillViewport="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#247BA0"
+        android:baselineAligned="false">
+
+
+        <TextView
+            android:textColor="#FDFFFC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Miscellaneous Rules"
+            android:id="@+id/textView110"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textAlignment="center" />
+
+        <TextView
+            android:textColor="#FDFFFC"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Tasheel (تسهيل) is to read a ء softly, somewhere between a ء and ا. It occurs in the Quraan in the following place:"
+            android:id="@+id/textView4"
+            android:onClick="alif"
+            android:textSize="20sp"
+            android:allowUndo="true"
+            android:layout_marginTop="10dp"
+            android:layout_margin="10dp" />
+
+        <TextView
+            android:textColor="#FDFFFC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ءَاَعْجَمِيٌ وَّ عَرَبِيٌ
+"
+            android:id="@+id/textView114"
+            android:textSize="24sp"
+            android:layout_marginTop="10dp"
+            android:layout_margin="10dp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:textColor="#FDFFFC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Imaalah (إمالة) is to read the kasrah mamdoodah (in some scripts fathah mamdoodah) between a fathah mamdoodah and kasrah mamdoodah. It occurs in the Quraan in the following place:"
+            android:id="@+id/textView115"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_margin="10dp" />
+
+        <TextView
+            android:textColor="#FDFFFC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="مَجْرٖىهَا "
+            android:id="@+id/textView173"
+            android:textSize="24sp"
+            android:layout_marginTop="10dp"
+            android:layout_margin="10dp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:textColor="#FDFFFC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ishmaam (إشمام) is to make your lips round like you are reading dhammah without making the sound of dhammah. It occurs in the Quraan in the following place:"
+            android:id="@+id/textView174"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_margin="10dp" />
+
+        <TextView
+            android:textColor="#FDFFFC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="لَا تَاْمَنَّا"
+            android:id="@+id/textView175"
+            android:textSize="24sp"
+            android:layout_marginTop="10dp"
+            android:layout_margin="10dp"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+
+</ScrollView>
+

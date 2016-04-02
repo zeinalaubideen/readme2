@@ -1,0 +1,295 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="zayne.fragz.Mad"
+    android:background="#F7E7CE"
+    >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#247BA0">
+
+    <TextView
+        android:textColor="#FDFFFC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Madd"
+        android:id="@+id/textView104"
+        android:textAlignment="center"
+        android:textSize="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_margin="10dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:textColor="#FDFFFC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Madd (مد) is the stretching of vowel sounds. Madd is done on the letters of madd mentioned earlier. There are two main types of madd:"
+        android:id="@+id/textView116"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_margin="10dp" />
+
+    <TextView
+        android:textColor="#FDFFFC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1. Asli (اصلي) is the reading of the letters of madd for the original duration of one alif without any additional stretching. This occurs when the letters of madd are not followed by ء or sukoon (or shaddah), as in:"
+        android:id="@+id/textView117"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_margin="10dp" />
+
+    <TextView
+        android:textColor="#FDFFFC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="قَالَ"
+        android:id="@+id/textView105"
+        android:textAlignment="textEnd"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_margin="10dp" />
+
+    <TextView
+        android:textColor="#FDFFFC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2. Far&apos;ee (فرعي) is the reading of the letters of madd in excess of the original duration of one alif. There are four types:"
+        android:id="@+id/textView106"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_margin="10dp" />
+
+    <TextView
+        android:textColor="#FDFFFC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Muttasil (متصل) is when a ء comes after the letter of madd in the same word. It will be read for two to three alifs, as in:"
+        android:id="@+id/textView107"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+    <TextView
+        android:textColor="#FDFFFC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="جَآءَ"
+        android:id="@+id/textView108"
+        android:textAlignment="textEnd"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+    <TextView
+        android:textColor="#FDFFFC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Munfasil (منفصل) is when a comes after the letter of madd in the following word. It will be read for two to two and a half alifs, as in:"
+        android:id="@+id/textView109"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+    <TextView
+        android:textColor="#FDFFFC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="وَ فِيْٓ اَنْفُسِكُم"
+        android:textAlignment="textEnd"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+    <TextView
+        android:textColor="#FDFFFC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Laazim (لازم) is when a permanent sukoon (or shaddah) comes after the letter of madd. It will be read for three alifs. There are four types:"
+        android:id="@+id/textView111"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+    <TextView
+        android:textColor="#FDFFFC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kalmi Mukhaffaf (كلمي مخقق) is when a permanent sukoon comes after the letter of madd in a word, as in:"
+        android:id="@+id/textView112"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp" />
+
+    <TextView
+        android:textColor="#FDFFFC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="آَلْئَنَ"
+        android:id="@+id/textView119"
+        android:textAlignment="textEnd"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp" />
+
+    <TextView
+        android:textColor="#FDFFFC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kalmi Muthaqqal (كلميب مثقل) is when a shaddah comes after the letter of madd in a word, as in:"
+        android:id="@+id/textView120"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp" />
+
+    <TextView
+        android:textColor="#FDFFFC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="وَ لَا الضَّآلِّيِنَ"
+        android:id="@+id/textView121"
+        android:textAlignment="textEnd"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp" />
+
+    <TextView
+        android:textColor="#FDFFFC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Harfi Mukhaffaf (حرفي مخفف) is when a permanent sukoon comes after the letter of madd in a letter [the letters at the beginning of some chapters of the Quraan, known as huroof ul muqatta&apos;aat ], as in: "
+        android:id="@+id/textView122"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+
+        <TextView
+            android:textColor="#FDFFFC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="يَسٓ"
+            android:id="@+id/textView31"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="30dp" />
+
+        <TextView
+            android:textColor="#FDFFFC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" read يَاسِيْنْ"
+            android:id="@+id/textView123"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" />
+    </LinearLayout>
+
+    <TextView
+        android:textColor="#FDFFFC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Harfi Muthaqqal (حرفي مثقل) is when a shaddah comes after the letter of madd in a letter, as in:"
+        android:id="@+id/textView124"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+
+        <TextView
+            android:textColor="#FDFFFC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="الٓمّٓ"
+            android:id="@+id/textView31rr"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="30dp" />
+
+        <TextView
+            android:textColor="#FDFFFC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" read الِفْ لَامْ مِّيْمْ"
+            android:id="@+id/textView123rr"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="30dp" />
+    </LinearLayout>
+
+    <TextView
+        android:textColor="#FDFFFC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aaridh (عارض) is when a temporary sukoon due to waqf comes after the letter of madd. It will be read for one to three alifs, as in:"
+        android:id="@+id/textView118"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+    <TextView
+        android:textColor="#FDFFFC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="عَظِيْمٍ ۝ "
+        android:id="@+id/textView113"
+        android:textAlignment="textEnd"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_margin="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+
+</LinearLayout>
+</ScrollView>

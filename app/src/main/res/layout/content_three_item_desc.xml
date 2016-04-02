@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="zayne.foundationsfinal.ShortVDescript"
+    tools:showIn="@layout/three_items"
+    android:background="#F7E7CE"
+
+    android:orientation="vertical">
+    <LinearLayout
+        android:background="#247BA0"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fatha"
+            android:id="@+id/first"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+
+            android:background="#FDFFFC"
+            android:textColor="#247BA0"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dhama"
+            android:id="@+id/second"
+            android:layout_weight="1"
+
+            android:background="#FDFFFC"
+            android:textColor="#247BA0"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kasrah"
+            android:id="@+id/third"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+
+            android:background="#FDFFFC"
+            android:textColor="#247BA0"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#247BA0"
+
+        >
+
+        <TextView
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/one"
+            android:textSize="150dp"
+            android:textColor="#FDFFFC"
+            android:textAlignment="center" />
+
+        <TextView
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/two"
+            android:textSize="150dp"
+            android:textColor="#FDFFFC"
+            android:textAlignment="center" />
+
+        <TextView
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/three"
+            android:textSize="150dp"
+            android:textColor="#FDFFFC"
+            android:textAlignment="center"
+            android:paddingBottom="30dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="#247BA0"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight="0.58"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/insert"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:paddingTop="20dp"
+            android:textColor="#FDFFFC"
+            />
+    </LinearLayout>
+
+</LinearLayout>

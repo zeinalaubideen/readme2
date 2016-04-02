@@ -1,0 +1,95 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="zayne.fragz.MeemRules"
+    android:background="#247BA0"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#247BA0">
+
+        <TextView
+            android:textColor="#FDFFFC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The Rules of م"
+            android:id="@+id/textView12"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:layout_margin="10dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:textColor="#FDFFFC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="There are three rules which apply to saakin:"
+            android:id="@+id/textView13"
+            android:textSize="18sp"
+            android:layout_margin="10dp" />
+
+        <TextView
+            android:textColor="#FDFFFC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. Ikhfaa Shafawi (اخفاء شفوي) , which literally means to hide with the lips. It is done when م saakin is followed by ب. It will be read with a light gunnah from the lips for one alif, as in:"
+            android:id="@+id/textView16"
+            android:textSize="18sp"
+            android:layout_margin="10dp" />
+
+        <TextView
+            android:textColor="#FDFFFC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="امْ بِهِ"
+            android:id="@+id/textView17"
+            android:textSize="24sp"
+            android:layout_margin="10dp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:textColor="#FDFFFC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. Idghaam Shafawi (ادغام شفوي) , which literally means to assimilate with the lips. It is done when م saakin is followed by م. Both will be assimilated and read with a gunnah from the lips for one alif, as in:"
+            android:id="@+id/textView18"
+            android:textSize="18sp"
+            android:layout_margin="10dp" />
+
+        <TextView
+            android:textColor="#FDFFFC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="لَهُمْ مَا"
+            android:id="@+id/textView15"
+            android:textSize="24sp"
+            android:layout_margin="10dp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:textColor="#FDFFFC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3. Ithhaar Shafawi (اظهار شفوي), which literally means to make clear or apparent with the lips. It is done when م saakin is followed by any other letter other than م or ب. It will be read clearly without any stretching or gunnah, as in:"
+            android:id="@+id/textView14"
+            android:textSize="18sp"
+            android:layout_margin="10dp" />
+
+        <TextView
+            android:textColor="#FDFFFC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="عَلَيْهِمْ وَ"
+            android:id="@+id/textView19"
+            android:textSize="24sp"
+            android:layout_margin="10dp"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+
+
+</ScrollView>
