@@ -14,6 +14,8 @@ public class TanweenDescription extends AppCompatActivity {
     private TextView insert, fatt, dham, kas;
     private Button fatha, dhama, kasrah;
     private String[] position = {"Fathatan", "Dhamatan", "Kasrahtan"};
+    private DescriptionParams huroof;
+
 
 
     @Override
@@ -56,98 +58,41 @@ public class TanweenDescription extends AppCompatActivity {
         kasrah.setText("Kasratan");
         //this is where all the audio files will be offloaded from
 
-        //This is where all the sound files are goiing to be placed
-       /* harfs = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
-        alif = harfs.load(this, sounds[0], 1);
-        ba = harfs.load(this, sounds[1], 1);
-        ta = harfs.load(this, sounds[2], 1);
-        tha = harfs.load(this, sounds[3], 1);
-        jeem = harfs.load(this, sounds[4], 1);
-        ha = harfs.load(this, sounds[5], 1);
-        kha = harfs.load(this, sounds[6], 1);
-        dal = harfs.load(this, sounds[7], 1);
-        dhal = harfs.load(this, sounds[8], 1);
-        ra = harfs.load(this, sounds[9], 1);
-        zay = harfs.load(this, sounds[10], 1);
-        seen = harfs.load(this, sounds[11], 1);
-        sheen = harfs.load(this, sounds[12], 1);
-        saad = harfs.load(this, sounds[13], 1);
-        daad = harfs.load(this, sounds[14], 1);
-        taah = harfs.load(this, sounds[15], 1);
-        dhaa = harfs.load(this, sounds[16], 1);
-        ayn = harfs.load(this, sounds[17], 1);
-        ghayn = harfs.load(this, sounds[18], 1);
-        fa = harfs.load(this, sounds[19], 1);
-        qaf = harfs.load(this, sounds[20], 1);
-        kaf = harfs.load(this, sounds[21], 1);
-        lam = harfs.load(this, sounds[22], 1);
-        meem = harfs.load(this, sounds[23], 1);
-        noon = harfs.load(this, sounds[24], 1);
-        wow = harfs.load(this, sounds[25], 1);
-        haa = harfs.load(this, sounds[26], 1);
-        hamza = harfs.load(this, sounds[27], 1);
-        ya = harfs.load(this, sounds[28], 1);*/
+
 
 
         if (extras.getInt("harf") == 1) {
 
             getSupportActionBar().setTitle("اليف");
 
-            fatt.setText("اً");
-            fatt.setPadding(0, 10, 0, 0);
-            insert.setText(position[0]);
+            String harf1 = "اً";
+            String harf2= "اٌ";
+            String harf3 = "اٍ";
 
+            huroof = new DescriptionParams(harf1, harf2, harf3, position[0],position[1], position[2], fatt, dham, kas, insert);
+            huroof.displayone();
 
+            // all the audio will be loaded from here
+
+            SoundLoader alif = new SoundLoader(this, fatt, dham, kas,R.raw.alif,R.raw.alif,R.raw.wait);
+            alif.play();
 
             fatha.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-
-                    fatt.setText("اً");
-
-                    insert.setText(position[0]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.VISIBLE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.GONE);
-
-
-                }
-            });
+                public void onClick(View v) {huroof.displayone();}});
 
             dhama.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    dham.setText("اٌ");
-                    dham.setPadding(0,10,0,0);
-                    insert.setText(position[1]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.VISIBLE);
-
-                    kas.setVisibility(View.GONE);
-
+                    huroof.displayTwo();
 
                 }
             });
+
             kasrah.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    kas.setText("اٍ");
-                    insert.setText(position[2]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.VISIBLE);
-
+                    huroof.displayThree();
 
                 }
             });
@@ -159,60 +104,40 @@ public class TanweenDescription extends AppCompatActivity {
 
             getSupportActionBar().setTitle("بَاء");
 
-            fatt.setText("بًا");
-            insert.setText(position[0]);
 
+            String harf1 = "بًا";
+            String harf2= "بٌ";
+            String harf3 = "بٍ";
+
+            huroof = new DescriptionParams(harf1, harf2, harf3, position[0],position[1], position[2], fatt, dham, kas, insert);
+            huroof.displayone();
+
+            // all the audio will be loaded from here
+
+            SoundLoader alif = new SoundLoader(this, fatt, dham, kas,R.raw.alif,R.raw.alif,R.raw.wait);
+            alif.play();
 
             fatha.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-
-                    fatt.setText("بًا");
-                    insert.setText(position[0]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.VISIBLE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.GONE);
-
-
-                }
-            });
+                public void onClick(View v) {huroof.displayone();}});
 
             dhama.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    dham.setText("بٌ");
-                    insert.setText(position[1]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.VISIBLE);
-
-                    kas.setVisibility(View.GONE);
-
+                    huroof.displayTwo();
 
                 }
             });
+
             kasrah.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    kas.setText("بٍ");
-                    insert.setText(position[2]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.VISIBLE);
-
+                    huroof.displayThree();
 
                 }
             });
+
+
         }
         else if (extras.getInt("harf") == 3) {
 
@@ -220,60 +145,41 @@ public class TanweenDescription extends AppCompatActivity {
 
             getSupportActionBar().setTitle("تَاء");
 
-            fatt.setText("تًا");
-            insert.setText(position[0]);
 
+            String harf1 = "تًا";
+            String harf2= "تٌ";
+            String harf3 = "تٍ";
+
+            huroof = new DescriptionParams(harf1, harf2, harf3, position[0],position[1], position[2], fatt, dham, kas, insert);
+            huroof.displayone();
+
+            // all the audio will be loaded from here
+
+            SoundLoader alif = new SoundLoader(this, fatt, dham, kas,R.raw.alif,R.raw.alif,R.raw.wait);
+            alif.play();
 
             fatha.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-
-                    fatt.setText("تًا");
-                    insert.setText(position[0]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.VISIBLE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.GONE);
-
-
-                }
-            });
+                public void onClick(View v) {huroof.displayone();}});
 
             dhama.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    dham.setText("تٌ");
-                    insert.setText(position[1]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.VISIBLE);
-
-                    kas.setVisibility(View.GONE);
-
+                    huroof.displayTwo();
 
                 }
             });
+
             kasrah.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    kas.setText("تٍ");
-                    insert.setText(position[2]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.VISIBLE);
-
+                    huroof.displayThree();
 
                 }
             });
+
+
+
         }
         else if (extras.getInt("harf") == 4) {
 
@@ -281,60 +187,40 @@ public class TanweenDescription extends AppCompatActivity {
 
             getSupportActionBar().setTitle("ثَاء");
 
-            fatt.setText("ثًا");
-            insert.setText(position[0]);
+            String harf1 = "ثًا";
+            String harf2= "ثٌ";
+            String harf3 = "ثٍ";
 
+            huroof = new DescriptionParams(harf1, harf2, harf3, position[0],position[1], position[2], fatt, dham, kas, insert);
+            huroof.displayone();
+
+            // all the audio will be loaded from here
+
+            SoundLoader alif = new SoundLoader(this, fatt, dham, kas,R.raw.alif,R.raw.alif,R.raw.wait);
+            alif.play();
 
             fatha.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-
-                    fatt.setText("ثًا");
-                    insert.setText(position[0]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.VISIBLE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.GONE);
-
-
-                }
-            });
+                public void onClick(View v) {huroof.displayone();}});
 
             dhama.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    dham.setText("ثٌ");
-                    insert.setText(position[1]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.VISIBLE);
-
-                    kas.setVisibility(View.GONE);
-
+                    huroof.displayTwo();
 
                 }
             });
+
             kasrah.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    kas.setText("ثٍ");
-                    insert.setText(position[2]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.VISIBLE);
-
+                    huroof.displayThree();
 
                 }
             });
+
+
+
         }
         else if (extras.getInt("harf") == 5) {
 
@@ -342,57 +228,34 @@ public class TanweenDescription extends AppCompatActivity {
 
             getSupportActionBar().setTitle("جِيم");
 
-            fatt.setText("جًا");
-            insert.setText(position[0]);
+            String harf1 = "جًا ";
+            String harf2= "جٌ";
+            String harf3 = "جٍ";
 
+            huroof = new DescriptionParams(harf1, harf2, harf3, position[0],position[1], position[2], fatt, dham, kas, insert);
+            huroof.displayone();
+
+            // all the audio will be loaded from here
+
+            SoundLoader alif = new SoundLoader(this, fatt, dham, kas,R.raw.alif,R.raw.alif,R.raw.wait);
+            alif.play();
 
             fatha.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-
-                    fatt.setText("جًا");
-                    insert.setText(position[0]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.VISIBLE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.GONE);
-
-
-                }
-            });
+                public void onClick(View v) {huroof.displayone();}});
 
             dhama.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    dham.setText("جٌ");
-                    insert.setText(position[1]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.VISIBLE);
-
-                    kas.setVisibility(View.GONE);
-
+                    huroof.displayTwo();
 
                 }
             });
+
             kasrah.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    kas.setText("جٍ");
-                    insert.setText(position[2]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.VISIBLE);
-
+                    huroof.displayThree();
 
                 }
             });
@@ -403,57 +266,34 @@ public class TanweenDescription extends AppCompatActivity {
 
             getSupportActionBar().setTitle("حَاء");
 
-            fatt.setText("حًا");
-            insert.setText(position[0]);
+            String harf1 = "حًا";
+            String harf2= "حٌ";
+            String harf3 = "حٍ";
 
+            huroof = new DescriptionParams(harf1, harf2, harf3, position[0],position[1], position[2], fatt, dham, kas, insert);
+            huroof.displayone();
+
+            // all the audio will be loaded from here
+
+            SoundLoader alif = new SoundLoader(this, fatt, dham, kas,R.raw.alif,R.raw.alif,R.raw.wait);
+            alif.play();
 
             fatha.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-
-                    fatt.setText("حًا");
-                    insert.setText(position[0]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.VISIBLE);
-                    dham.setVisibility(View.GONE);
-
-                    kas.setVisibility(View.GONE);
-
-
-                }
-            });
+                public void onClick(View v) {huroof.displayone();}});
 
             dhama.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    dham.setText("حٌ");
-                    insert.setText(position[1]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.VISIBLE);
-                    kas.setVisibility(View.GONE);
-
+                    huroof.displayTwo();
 
                 }
             });
+
             kasrah.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    kas.setText("حٍ");
-                    insert.setText(position[2]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.VISIBLE);
-
+                    huroof.displayThree();
 
                 }
             });
@@ -464,57 +304,34 @@ public class TanweenDescription extends AppCompatActivity {
 
             getSupportActionBar().setTitle("خَاء");
 
-            fatt.setText("خًا");
-            insert.setText(position[0]);
+            String harf1 = "خًا";
+            String harf2= "خٌ";
+            String harf3 = "خٍ";
 
+            huroof = new DescriptionParams(harf1, harf2, harf3, position[0],position[1], position[2], fatt, dham, kas, insert);
+            huroof.displayone();
+
+            // all the audio will be loaded from here
+
+            SoundLoader alif = new SoundLoader(this, fatt, dham, kas,R.raw.alif,R.raw.alif,R.raw.wait);
+            alif.play();
 
             fatha.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-
-                    fatt.setText("خًا");
-                    insert.setText(position[0]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.VISIBLE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.GONE);
-
-
-                }
-            });
+                public void onClick(View v) {huroof.displayone();}});
 
             dhama.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    dham.setText("خٌ ");
-                    insert.setText(position[1]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.VISIBLE);
-
-                    kas.setVisibility(View.GONE);
-
+                    huroof.displayTwo();
 
                 }
             });
+
             kasrah.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    kas.setText("خٍ ");
-                    insert.setText(position[2]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.VISIBLE);
-
+                    huroof.displayThree();
 
                 }
             });
@@ -525,57 +342,34 @@ public class TanweenDescription extends AppCompatActivity {
 
             getSupportActionBar().setTitle("دَال");
 
-            fatt.setText("دًا");
-            insert.setText(position[0]);
+            String harf1 = "دًا";
+            String harf2= "دٌ";
+            String harf3 = "دٍ";
 
+            huroof = new DescriptionParams(harf1, harf2, harf3, position[0],position[1], position[2], fatt, dham, kas, insert);
+            huroof.displayone();
+
+            // all the audio will be loaded from here
+
+            SoundLoader alif = new SoundLoader(this, fatt, dham, kas,R.raw.alif,R.raw.alif,R.raw.wait);
+            alif.play();
 
             fatha.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-
-                    fatt.setText("دًا");
-                    insert.setText(position[0]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.VISIBLE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.GONE);
-
-
-                }
-            });
+                public void onClick(View v) {huroof.displayone();}});
 
             dhama.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    dham.setText("دٌ");
-                    insert.setText(position[1]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.VISIBLE);
-
-                    kas.setVisibility(View.GONE);
-
+                    huroof.displayTwo();
 
                 }
             });
+
             kasrah.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    kas.setText("دٍ");
-                    insert.setText(position[2]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.VISIBLE);
-
+                    huroof.displayThree();
 
                 }
             });
@@ -586,57 +380,34 @@ public class TanweenDescription extends AppCompatActivity {
 
             getSupportActionBar().setTitle("ذَال");
 
-            fatt.setText("ذًا");
-            insert.setText(position[0]);
+            String harf1 = "ذًا";
+            String harf2= "ذٌ";
+            String harf3 = "ذٍ";
 
+            huroof = new DescriptionParams(harf1, harf2, harf3, position[0],position[1], position[2], fatt, dham, kas, insert);
+            huroof.displayone();
+
+            // all the audio will be loaded from here
+
+            SoundLoader alif = new SoundLoader(this, fatt, dham, kas,R.raw.alif,R.raw.alif,R.raw.wait);
+            alif.play();
 
             fatha.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-
-                    fatt.setText("ذًا");
-                    insert.setText(position[0]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.VISIBLE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.GONE);
-
-
-                }
-            });
+                public void onClick(View v) {huroof.displayone();}});
 
             dhama.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    dham.setText("ذٌ");
-                    insert.setText(position[1]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.VISIBLE);
-
-                    kas.setVisibility(View.GONE);
-
+                    huroof.displayTwo();
 
                 }
             });
+
             kasrah.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    kas.setText("ذٍ");
-                    insert.setText(position[2]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.VISIBLE);
-
+                    huroof.displayThree();
 
                 }
             });
@@ -647,57 +418,34 @@ public class TanweenDescription extends AppCompatActivity {
 
             getSupportActionBar().setTitle("رَاء");
 
-            fatt.setText("رًا");
-            insert.setText(position[0]);
+            String harf1 = "رًا";
+            String harf2= "رٌ";
+            String harf3 = "رٍ";
 
+            huroof = new DescriptionParams(harf1, harf2, harf3, position[0],position[1], position[2], fatt, dham, kas, insert);
+            huroof.displayone();
+
+            // all the audio will be loaded from here
+
+            SoundLoader alif = new SoundLoader(this, fatt, dham, kas,R.raw.alif,R.raw.alif,R.raw.wait);
+            alif.play();
 
             fatha.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-
-                    fatt.setText("رًا");
-                    insert.setText(position[0]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.VISIBLE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.GONE);
-
-
-                }
-            });
+                public void onClick(View v) {huroof.displayone();}});
 
             dhama.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    dham.setText("رٌ");
-                    insert.setText(position[1]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.VISIBLE);
-
-                    kas.setVisibility(View.GONE);
-
+                    huroof.displayTwo();
 
                 }
             });
+
             kasrah.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    kas.setText("رٍ");
-                    insert.setText(position[2]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.VISIBLE);
-
+                    huroof.displayThree();
 
                 }
             });
@@ -708,57 +456,34 @@ public class TanweenDescription extends AppCompatActivity {
 
             getSupportActionBar().setTitle("زَاي");
 
-            fatt.setText("زًا");
-            insert.setText(position[0]);
+            String harf1 = "زًا";
+            String harf2= "زٌ";
+            String harf3 = "زٍ";
 
+            huroof = new DescriptionParams(harf1, harf2, harf3, position[0],position[1], position[2], fatt, dham, kas, insert);
+            huroof.displayone();
+
+            // all the audio will be loaded from here
+
+            SoundLoader alif = new SoundLoader(this, fatt, dham, kas,R.raw.alif,R.raw.alif,R.raw.wait);
+            alif.play();
 
             fatha.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-
-                    fatt.setText("زًا");
-                    insert.setText(position[0]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.VISIBLE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.GONE);
-
-
-                }
-            });
+                public void onClick(View v) {huroof.displayone();}});
 
             dhama.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    dham.setText("زٌ");
-                    insert.setText(position[1]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.VISIBLE);
-
-                    kas.setVisibility(View.GONE);
-
+                    huroof.displayTwo();
 
                 }
             });
+
             kasrah.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    kas.setText("زٍ");
-                    insert.setText(position[2]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.VISIBLE);
-
+                    huroof.displayThree();
 
                 }
             });
@@ -769,57 +494,34 @@ public class TanweenDescription extends AppCompatActivity {
 
             getSupportActionBar().setTitle("سِين");
 
-            fatt.setText("سًا");
-            insert.setText(position[0]);
+            String harf1 = "سًا";
+            String harf2= "سٌ";
+            String harf3 = "سٍ";
 
+            huroof = new DescriptionParams(harf1, harf2, harf3, position[0],position[1], position[2], fatt, dham, kas, insert);
+            huroof.displayone();
+
+            // all the audio will be loaded from here
+
+            SoundLoader alif = new SoundLoader(this, fatt, dham, kas,R.raw.alif,R.raw.alif,R.raw.wait);
+            alif.play();
 
             fatha.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-
-                    fatt.setText("سًا");
-                    insert.setText(position[0]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.VISIBLE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.GONE);
-
-
-                }
-            });
+                public void onClick(View v) {huroof.displayone();}});
 
             dhama.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    dham.setText("سٌ");
-                    insert.setText(position[1]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.VISIBLE);
-
-                    kas.setVisibility(View.GONE);
-
+                    huroof.displayTwo();
 
                 }
             });
+
             kasrah.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    kas.setText("سٍ");
-                    insert.setText(position[2]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.VISIBLE);
-
+                    huroof.displayThree();
 
                 }
             });
@@ -830,57 +532,34 @@ public class TanweenDescription extends AppCompatActivity {
 
             getSupportActionBar().setTitle("شحين");
 
-            fatt.setText("شًا");
-            insert.setText(position[0]);
+            String harf1 = "شًا";
+            String harf2= "شٌ";
+            String harf3 = "شٍ";
 
+            huroof = new DescriptionParams(harf1, harf2, harf3, position[0],position[1], position[2], fatt, dham, kas, insert);
+            huroof.displayone();
+
+            // all the audio will be loaded from here
+
+            SoundLoader alif = new SoundLoader(this, fatt, dham, kas,R.raw.alif,R.raw.alif,R.raw.wait);
+            alif.play();
 
             fatha.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-
-                    fatt.setText("شًا");
-                    insert.setText(position[0]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.VISIBLE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.GONE);
-
-
-                }
-            });
+                public void onClick(View v) {huroof.displayone();}});
 
             dhama.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    dham.setText("شٌ");
-                    insert.setText(position[1]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.VISIBLE);
-
-                    kas.setVisibility(View.GONE);
-
+                    huroof.displayTwo();
 
                 }
             });
+
             kasrah.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    kas.setText("شٍ ");
-                    insert.setText(position[2]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.VISIBLE);
-
+                    huroof.displayThree();
 
                 }
             });
@@ -891,57 +570,34 @@ public class TanweenDescription extends AppCompatActivity {
 
             getSupportActionBar().setTitle("صَاد");
 
-            fatt.setText("صًا");
-            insert.setText(position[0]);
+            String harf1 = "صًا";
+            String harf2= "صٌ";
+            String harf3 = "صٍ";
 
+            huroof = new DescriptionParams(harf1, harf2, harf3, position[0],position[1], position[2], fatt, dham, kas, insert);
+            huroof.displayone();
+
+            // all the audio will be loaded from here
+
+            SoundLoader alif = new SoundLoader(this, fatt, dham, kas,R.raw.alif,R.raw.alif,R.raw.wait);
+            alif.play();
 
             fatha.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-
-                    fatt.setText("صًا");
-                    insert.setText(position[0]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.VISIBLE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.GONE);
-
-
-                }
-            });
+                public void onClick(View v) {huroof.displayone();}});
 
             dhama.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    dham.setText("صٌ");
-                    insert.setText(position[1]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.VISIBLE);
-
-                    kas.setVisibility(View.GONE);
-
+                    huroof.displayTwo();
 
                 }
             });
+
             kasrah.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    kas.setText("صٍ");
-                    insert.setText(position[2]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.VISIBLE);
-
+                    huroof.displayThree();
 
                 }
             });
@@ -952,57 +608,34 @@ public class TanweenDescription extends AppCompatActivity {
 
             getSupportActionBar().setTitle("صَاد");
 
-            fatt.setText("ضًا ");
-            insert.setText(position[0]);
+            String harf1 = "ضًا";
+            String harf2= "ضٌ";
+            String harf3 = "ضٍ";
 
+            huroof = new DescriptionParams(harf1, harf2, harf3, position[0],position[1], position[2], fatt, dham, kas, insert);
+            huroof.displayone();
+
+            // all the audio will be loaded from here
+
+            SoundLoader alif = new SoundLoader(this, fatt, dham, kas,R.raw.alif,R.raw.alif,R.raw.wait);
+            alif.play();
 
             fatha.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-
-                    fatt.setText("ضًا");
-                    insert.setText(position[0]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.VISIBLE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.GONE);
-
-
-                }
-            });
+                public void onClick(View v) {huroof.displayone();}});
 
             dhama.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    dham.setText("ضٌ");
-                    insert.setText(position[1]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.VISIBLE);
-
-                    kas.setVisibility(View.GONE);
-
+                    huroof.displayTwo();
 
                 }
             });
+
             kasrah.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    kas.setText("ضٍ");
-                    insert.setText(position[2]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.VISIBLE);
-
+                    huroof.displayThree();
 
                 }
             });
@@ -1013,57 +646,34 @@ public class TanweenDescription extends AppCompatActivity {
 
             getSupportActionBar().setTitle("طَاء");
 
-            fatt.setText("طًا");
-            insert.setText(position[0]);
+            String harf1 = "طًا ";
+            String harf2= "طٌ";
+            String harf3 = "طٍ";
 
+            huroof = new DescriptionParams(harf1, harf2, harf3, position[0],position[1], position[2], fatt, dham, kas, insert);
+            huroof.displayone();
+
+            // all the audio will be loaded from here
+
+            SoundLoader alif = new SoundLoader(this, fatt, dham, kas,R.raw.alif,R.raw.alif,R.raw.wait);
+            alif.play();
 
             fatha.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-
-                    fatt.setText("طًا");
-                    insert.setText(position[0]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.VISIBLE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.GONE);
-
-
-                }
-            });
+                public void onClick(View v) {huroof.displayone();}});
 
             dhama.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    dham.setText("طٌ");
-                    insert.setText(position[1]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.VISIBLE);
-
-                    kas.setVisibility(View.GONE);
-
+                    huroof.displayTwo();
 
                 }
             });
+
             kasrah.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    kas.setText("طٍ");
-                    insert.setText(position[2]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.VISIBLE);
-
+                    huroof.displayThree();
 
                 }
             });
@@ -1074,57 +684,34 @@ public class TanweenDescription extends AppCompatActivity {
 
             getSupportActionBar().setTitle("ظَاء");
 
-            fatt.setText("ظًا");
-            insert.setText(position[0]);
+            String harf1 = "ظًا";
+            String harf2= "ظٌ";
+            String harf3 = "ظٍ";
 
+            huroof = new DescriptionParams(harf1, harf2, harf3, position[0],position[1], position[2], fatt, dham, kas, insert);
+            huroof.displayone();
+
+            // all the audio will be loaded from here
+
+            SoundLoader alif = new SoundLoader(this, fatt, dham, kas,R.raw.alif,R.raw.alif,R.raw.wait);
+            alif.play();
 
             fatha.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-
-                    fatt.setText("ظًا");
-                    insert.setText(position[0]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.VISIBLE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.GONE);
-
-
-                }
-            });
+                public void onClick(View v) {huroof.displayone();}});
 
             dhama.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    dham.setText("ظٌ");
-                    insert.setText(position[1]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.VISIBLE);
-
-                    kas.setVisibility(View.GONE);
-
+                    huroof.displayTwo();
 
                 }
             });
+
             kasrah.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    kas.setText("ظٍ");
-                    insert.setText(position[2]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.VISIBLE);
-
+                    huroof.displayThree();
 
                 }
             });
@@ -1135,57 +722,34 @@ public class TanweenDescription extends AppCompatActivity {
 
             getSupportActionBar().setTitle("عَينٍ");
 
-            fatt.setText("عًا");
-            insert.setText(position[0]);
+            String harf1 = "عًا";
+            String harf2= "عٌ";
+            String harf3 = "عٍ";
 
+            huroof = new DescriptionParams(harf1, harf2, harf3, position[0],position[1], position[2], fatt, dham, kas, insert);
+            huroof.displayone();
+
+            // all the audio will be loaded from here
+
+            SoundLoader alif = new SoundLoader(this, fatt, dham, kas,R.raw.alif,R.raw.alif,R.raw.wait);
+            alif.play();
 
             fatha.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-
-                    fatt.setText("عًا");
-                    insert.setText(position[0]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.VISIBLE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.GONE);
-
-
-                }
-            });
+                public void onClick(View v) {huroof.displayone();}});
 
             dhama.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    dham.setText("عٌ");
-                    insert.setText(position[1]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.VISIBLE);
-
-                    kas.setVisibility(View.GONE);
-
+                    huroof.displayTwo();
 
                 }
             });
+
             kasrah.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    kas.setText("عٍ ");
-                    insert.setText(position[2]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.VISIBLE);
-
+                    huroof.displayThree();
 
                 }
             });
@@ -1196,57 +760,34 @@ public class TanweenDescription extends AppCompatActivity {
 
             getSupportActionBar().setTitle("غَين");
 
-            fatt.setText("غًا");
-            insert.setText(position[0]);
+            String harf1 = "غًا";
+            String harf2= "غٌ";
+            String harf3 = "غٍ";
 
+            huroof = new DescriptionParams(harf1, harf2, harf3, position[0],position[1], position[2], fatt, dham, kas, insert);
+            huroof.displayone();
+
+            // all the audio will be loaded from here
+
+            SoundLoader alif = new SoundLoader(this, fatt, dham, kas,R.raw.alif,R.raw.alif,R.raw.wait);
+            alif.play();
 
             fatha.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-
-                    fatt.setText("غًا");
-                    insert.setText(position[0]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.VISIBLE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.GONE);
-
-
-                }
-            });
+                public void onClick(View v) {huroof.displayone();}});
 
             dhama.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    dham.setText("غٌ");
-                    insert.setText(position[1]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.VISIBLE);
-
-                    kas.setVisibility(View.GONE);
-
+                    huroof.displayTwo();
 
                 }
             });
+
             kasrah.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    kas.setText("غٍ ");
-                    insert.setText(position[2]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.VISIBLE);
-
+                    huroof.displayThree();
 
                 }
             });
@@ -1257,57 +798,34 @@ public class TanweenDescription extends AppCompatActivity {
 
             getSupportActionBar().setTitle("فَاء");
 
-            fatt.setText("فًا");
-            insert.setText(position[0]);
+            String harf1 = "فًا";
+            String harf2= "فٌ";
+            String harf3 = "فٍ";
 
+            huroof = new DescriptionParams(harf1, harf2, harf3, position[0],position[1], position[2], fatt, dham, kas, insert);
+            huroof.displayone();
+
+            // all the audio will be loaded from here
+
+            SoundLoader alif = new SoundLoader(this, fatt, dham, kas,R.raw.alif,R.raw.alif,R.raw.wait);
+            alif.play();
 
             fatha.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-
-                    fatt.setText("فًا");
-                    insert.setText(position[0]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.VISIBLE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.GONE);
-
-
-                }
-            });
+                public void onClick(View v) {huroof.displayone();}});
 
             dhama.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    dham.setText("فٌ");
-                    insert.setText(position[1]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.VISIBLE);
-
-                    kas.setVisibility(View.GONE);
-
+                    huroof.displayTwo();
 
                 }
             });
+
             kasrah.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    kas.setText("فٍ");
-                    insert.setText(position[2]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.VISIBLE);
-
+                    huroof.displayThree();
 
                 }
             });
@@ -1318,57 +836,34 @@ public class TanweenDescription extends AppCompatActivity {
 
             getSupportActionBar().setTitle("قَاف");
 
-            fatt.setText("قًا");
-            insert.setText(position[0]);
+            String harf1 = "قًا";
+            String harf2= "قٌ";
+            String harf3 = "قٍ";
 
+            huroof = new DescriptionParams(harf1, harf2, harf3, position[0],position[1], position[2], fatt, dham, kas, insert);
+            huroof.displayone();
+
+            // all the audio will be loaded from here
+
+            SoundLoader alif = new SoundLoader(this, fatt, dham, kas,R.raw.alif,R.raw.alif,R.raw.wait);
+            alif.play();
 
             fatha.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-
-                    fatt.setText("قًا");
-                    insert.setText(position[0]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.VISIBLE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.GONE);
-
-
-                }
-            });
+                public void onClick(View v) {huroof.displayone();}});
 
             dhama.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    dham.setText("قٌ");
-                    insert.setText(position[1]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.VISIBLE);
-
-                    kas.setVisibility(View.GONE);
-
+                    huroof.displayTwo();
 
                 }
             });
+
             kasrah.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    kas.setText("قٍ");
-                    insert.setText(position[2]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.VISIBLE);
-
+                    huroof.displayThree();
 
                 }
             });
@@ -1379,57 +874,34 @@ public class TanweenDescription extends AppCompatActivity {
 
             getSupportActionBar().setTitle("كَاف");
 
-            fatt.setText("كًا");
-            insert.setText(position[0]);
+            String harf1 = "كًا";
+            String harf2= "كٌ";
+            String harf3 = "كٍ";
 
+            huroof = new DescriptionParams(harf1, harf2, harf3, position[0],position[1], position[2], fatt, dham, kas, insert);
+            huroof.displayone();
+
+            // all the audio will be loaded from here
+
+            SoundLoader alif = new SoundLoader(this, fatt, dham, kas,R.raw.alif,R.raw.alif,R.raw.wait);
+            alif.play();
 
             fatha.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-
-                    fatt.setText("كًا");
-                    insert.setText(position[0]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.VISIBLE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.GONE);
-
-
-                }
-            });
+                public void onClick(View v) {huroof.displayone();}});
 
             dhama.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    dham.setText("كٌ");
-                    insert.setText(position[1]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.VISIBLE);
-
-                    kas.setVisibility(View.GONE);
-
+                    huroof.displayTwo();
 
                 }
             });
+
             kasrah.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    kas.setText("كٍ");
-                    insert.setText(position[2]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.VISIBLE);
-
+                    huroof.displayThree();
 
                 }
             });
@@ -1440,57 +912,34 @@ public class TanweenDescription extends AppCompatActivity {
 
             getSupportActionBar().setTitle("لاَم");
 
-            fatt.setText("لًا  ");
-            insert.setText(position[0]);
+            String harf1 = "لًا";
+            String harf2= "ل" ;
+            String harf3 = "لٍ";
 
+            huroof = new DescriptionParams(harf1, harf2, harf3, position[0],position[1], position[2], fatt, dham, kas, insert);
+            huroof.displayone();
+
+            // all the audio will be loaded from here
+
+            SoundLoader alif = new SoundLoader(this, fatt, dham, kas,R.raw.alif,R.raw.alif,R.raw.wait);
+            alif.play();
 
             fatha.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-
-                    fatt.setText("لًا ");
-                    insert.setText(position[0]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.VISIBLE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.GONE);
-
-
-                }
-            });
+                public void onClick(View v) {huroof.displayone();}});
 
             dhama.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    dham.setText("لٌ");
-                    insert.setText(position[1]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.VISIBLE);
-
-                    kas.setVisibility(View.GONE);
-
+                    huroof.displayTwo();
 
                 }
             });
+
             kasrah.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    kas.setText("لٍ");
-                    insert.setText(position[2]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.VISIBLE);
-
+                    huroof.displayThree();
 
                 }
             });
@@ -1501,57 +950,34 @@ public class TanweenDescription extends AppCompatActivity {
 
             getSupportActionBar().setTitle("مِيم");
 
-            fatt.setText("مًا");
-            insert.setText(position[0]);
+            String harf1 = "مًا";
+            String harf2= "مٌ";
+            String harf3 = "مٍ";
 
+            huroof = new DescriptionParams(harf1, harf2, harf3, position[0],position[1], position[2], fatt, dham, kas, insert);
+            huroof.displayone();
+
+            // all the audio will be loaded from here
+
+            SoundLoader alif = new SoundLoader(this, fatt, dham, kas,R.raw.alif,R.raw.alif,R.raw.wait);
+            alif.play();
 
             fatha.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-
-                    fatt.setText("مًا");
-                    insert.setText(position[0]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.VISIBLE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.GONE);
-
-
-                }
-            });
+                public void onClick(View v) {huroof.displayone();}});
 
             dhama.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    dham.setText("مٌ");
-                    insert.setText(position[1]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.VISIBLE);
-
-                    kas.setVisibility(View.GONE);
-
+                    huroof.displayTwo();
 
                 }
             });
+
             kasrah.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    kas.setText("مٍ");
-                    insert.setText(position[2]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.VISIBLE);
-
+                    huroof.displayThree();
 
                 }
             });
@@ -1562,57 +988,34 @@ public class TanweenDescription extends AppCompatActivity {
 
             getSupportActionBar().setTitle("نُون");
 
-            fatt.setText("نًا");
-            insert.setText(position[0]);
+            String harf1 = "نًا";
+            String harf2= "نٌ";
+            String harf3 = "نٍ";
 
+            huroof = new DescriptionParams(harf1, harf2, harf3, position[0],position[1], position[2], fatt, dham, kas, insert);
+            huroof.displayone();
+
+            // all the audio will be loaded from here
+
+            SoundLoader alif = new SoundLoader(this, fatt, dham, kas,R.raw.alif,R.raw.alif,R.raw.wait);
+            alif.play();
 
             fatha.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-
-                    fatt.setText("نًا");
-                    insert.setText(position[0]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.VISIBLE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.GONE);
-
-
-                }
-            });
+                public void onClick(View v) {huroof.displayone();}});
 
             dhama.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    dham.setText("نٌ ");
-                    insert.setText(position[1]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.VISIBLE);
-
-                    kas.setVisibility(View.GONE);
-
+                    huroof.displayTwo();
 
                 }
             });
+
             kasrah.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    kas.setText("نٍ");
-                    insert.setText(position[2]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.VISIBLE);
-
+                    huroof.displayThree();
 
                 }
             });
@@ -1623,57 +1026,34 @@ public class TanweenDescription extends AppCompatActivity {
 
             getSupportActionBar().setTitle("وَاو");
 
-            fatt.setText("وًا");
-            insert.setText(position[0]);
+            String harf1 = "وًا";
+            String harf2= "وٌ";
+            String harf3 = "وٌ";
 
+            huroof = new DescriptionParams(harf1, harf2, harf3, position[0],position[1], position[2], fatt, dham, kas, insert);
+            huroof.displayone();
+
+            // all the audio will be loaded from here
+
+            SoundLoader alif = new SoundLoader(this, fatt, dham, kas,R.raw.alif,R.raw.alif,R.raw.wait);
+            alif.play();
 
             fatha.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-
-                    fatt.setText("وًا");
-                    insert.setText(position[0]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.VISIBLE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.GONE);
-
-
-                }
-            });
+                public void onClick(View v) {huroof.displayone();}});
 
             dhama.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    dham.setText("وٌ");
-                    insert.setText(position[1]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.VISIBLE);
-
-                    kas.setVisibility(View.GONE);
-
+                    huroof.displayTwo();
 
                 }
             });
+
             kasrah.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    kas.setText("وٍ");
-                    insert.setText(position[2]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.VISIBLE);
-
+                    huroof.displayThree();
 
                 }
             });
@@ -1684,57 +1064,34 @@ public class TanweenDescription extends AppCompatActivity {
 
             getSupportActionBar().setTitle("هَاء");
 
-            fatt.setText("هًا ");
-            insert.setText(position[0]);
+            String harf1 = "هًا";
+            String harf2= "هٌـ";
+            String harf3 = "هـٍ";
 
+            huroof = new DescriptionParams(harf1, harf2, harf3, position[0],position[1], position[2], fatt, dham, kas, insert);
+            huroof.displayone();
+
+            // all the audio will be loaded from here
+
+            SoundLoader alif = new SoundLoader(this, fatt, dham, kas,R.raw.alif,R.raw.alif,R.raw.wait);
+            alif.play();
 
             fatha.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-
-                    fatt.setText("هًا ");
-                    insert.setText(position[0]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.VISIBLE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.GONE);
-
-
-                }
-            });
+                public void onClick(View v) {huroof.displayone();}});
 
             dhama.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    dham.setText("هٌـ");
-                    insert.setText(position[1]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.VISIBLE);
-
-                    kas.setVisibility(View.GONE);
-
+                    huroof.displayTwo();
 
                 }
             });
+
             kasrah.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    kas.setText("هـٍ");
-                    insert.setText(position[2]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.VISIBLE);
-
+                    huroof.displayThree();
 
                 }
             });
@@ -1745,56 +1102,34 @@ public class TanweenDescription extends AppCompatActivity {
 
             getSupportActionBar().setTitle("هَمزَة");
 
-            fatt.setText("ءًا");
-            insert.setText(position[0]);
+            String harf1 = "ءًا";
+            String harf2= "ءٌ";
+            String harf3 = "ءٍ";
 
+            huroof = new DescriptionParams(harf1, harf2, harf3, position[0],position[1], position[2], fatt, dham, kas, insert);
+            huroof.displayone();
+
+            // all the audio will be loaded from here
+
+            SoundLoader alif = new SoundLoader(this, fatt, dham, kas,R.raw.alif,R.raw.alif,R.raw.wait);
+            alif.play();
 
             fatha.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-
-                    fatt.setText("ءًا");
-                    insert.setText(position[0]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.VISIBLE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.GONE);
-
-
-                }
-            });
+                public void onClick(View v) {huroof.displayone();}});
 
             dhama.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    dham.setText("ءٌ");
-                    insert.setText(position[1]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.VISIBLE);
-                    kas.setVisibility(View.GONE);
-
+                    huroof.displayTwo();
 
                 }
             });
+
             kasrah.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    kas.setText("ءٍ");
-                    insert.setText(position[2]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.VISIBLE);
-
+                    huroof.displayThree();
 
                 }
             });
@@ -1805,56 +1140,34 @@ public class TanweenDescription extends AppCompatActivity {
 
             getSupportActionBar().setTitle("يَاء");
 
-            fatt.setText("يًا");
-            insert.setText(position[0]);
+            String harf1 = "يًا";
+            String harf2= "يٌ";
+            String harf3 = "يٍ";
 
+            huroof = new DescriptionParams(harf1, harf2, harf3, position[0],position[1], position[2], fatt, dham, kas, insert);
+            huroof.displayone();
+
+            // all the audio will be loaded from here
+
+            SoundLoader alif = new SoundLoader(this, fatt, dham, kas,R.raw.alif,R.raw.alif,R.raw.wait);
+            alif.play();
 
             fatha.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-
-                    fatt.setText("يًا");
-                    insert.setText(position[0]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.VISIBLE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.GONE);
-
-
-                }
-            });
+                public void onClick(View v) {huroof.displayone();}});
 
             dhama.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    dham.setText("يٌ");
-                    insert.setText(position[1]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.VISIBLE);
-                    kas.setVisibility(View.GONE);
-
+                    huroof.displayTwo();
 
                 }
             });
+
             kasrah.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    kas.setText("يٍ");
-                    insert.setText(position[2]);
-
-
-                    //this will cause the other imageviews to be hidden and keep only one visible
-                    fatt.setVisibility(View.GONE);
-                    dham.setVisibility(View.GONE);
-                    kas.setVisibility(View.VISIBLE);
-
+                    huroof.displayThree();
 
                 }
             });

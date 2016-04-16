@@ -3,7 +3,7 @@
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:contextClickable="false"
     android:textAlignment="center"
-    android:background="#F7E7CE"
+    android:background="#247BA0"
     >
 
     <LinearLayout

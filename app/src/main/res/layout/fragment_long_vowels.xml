@@ -209,7 +209,6 @@
             android:textColor="#FDFFFC"
             android:textSize="40sp"
             android:layout_marginLeft="10dp"
-            android:paddingLeft="10dp"
             android:id="@+id/bb" />
         <TextView
             android:text="Small Yaa"

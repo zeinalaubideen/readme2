@@ -62,32 +62,33 @@
         >
 
         <TextView
-            android:paddingTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/one"
-            android:textSize="150dp"
+            android:textSize="150sp"
             android:textColor="#FDFFFC"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:paddingTop="15dp" />
 
         <TextView
-            android:paddingTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/two"
-            android:textSize="150dp"
+            android:textSize="150sp"
             android:textColor="#FDFFFC"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:paddingTop="15dp" />
 
         <TextView
-            android:paddingTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/three"
-            android:textSize="150dp"
+            android:textSize="150sp"
             android:textColor="#FDFFFC"
             android:textAlignment="center"
-            android:paddingBottom="30dp"/>
+            android:textIsSelectable="false"
+            android:paddingBottom="35dp" />
     </LinearLayout>
 
     <LinearLayout
